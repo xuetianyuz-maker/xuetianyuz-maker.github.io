@@ -23,7 +23,6 @@
             border: 1px solid #e0e0e0;
             border-top: none;
             border-radius: 0 0 6px 6px;
-            margin-bottom: 20px;
         }
         .info-item {
             padding: 22px 20px;
@@ -43,22 +42,7 @@
             color: #999;
             line-height: 1.6;
         }
-        /* 二维码容器样式 */
-        .qrcode-box {
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            padding: 20px;
-            text-align: center;
-        }
-        .qrcode-box p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 15px;
-        }
     </style>
-    <!-- 引入二维码生成库 -->
-    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 </head>
 <body>
     <div class="contract-header">合同信息</div>
@@ -77,26 +61,8 @@
         </div>
         <div class="info-item">
             <div class="info-label">对方单位</div>
-            <div class="info-value">成都市天泸物资有限公司,中铁一局集团（海南）国际建设有限公司</div>
+            <div class="info-value">万势(深圳)国际供应链有限公司,中铁一局集团（海南）国际建设有限公司</div>
         </div>
     </div>
-
-    <!-- 二维码展示区域 -->
-    <div class="qrcode-box">
-        <p>微信扫一扫，查看合同信息</p>
-        <div id="qrcode"></div>
-    </div>
-
-    <script>
-        // 生成二维码，指向你的网页地址
-        new QRCode(document.getElementById("qrcode"), {
-            text: "https://xuetianyuz-maker.github.io",
-            width: 200,
-            height: 200,
-            colorDark : "#000000",
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H
-        });
-    </script>
 </body>
 </html>
